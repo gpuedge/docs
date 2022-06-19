@@ -38,7 +38,7 @@ module.exports = {
           showLastUpdateTime: true,
           breadcrumbs: false,
           editUrl: "https://github.com/near/docs/edit/master/website",
-          path: "../docs",
+          path: "docs",
           sidebarPath: "./sidebars.json",
           routeBasePath: "/",
         },
