@@ -11,23 +11,22 @@
     },
     [
       "concepts/basics/protocol",
-      "concepts/basics/tokens",
-      "concepts/basics/account",
+      "concepts/basics/wallet",
+      "concepts/basics/storage",
       {
-        "Smart Contracts": [
-          "concepts/basics/smartcontracts/smartcontracts",
-          "concepts/basics/smartcontracts/state"
+        "Jobs": [
+          "concepts/basics/jobs/ai",
+          "concepts/basics/jobs/rendering",
+          "concepts/basics/jobs/video",
+          "concepts/basics/jobs/live"
         ]
       },
       {
-        "Transactions": [
-          "concepts/basics/transactions/overview",
-          "concepts/basics/transactions/gas"
+        "Farming": [
+          "concepts/basics/farming/overview",
+          "concepts/basics/farming/earned"
         ]
-      },
-      "concepts/basics/validators",
-      "concepts/basics/networks",
-      "concepts/basics/epoch"
+      }
     ],
     {
       "type": "html",
@@ -38,43 +37,15 @@
       "value": "<span class='menu__link'><b><small> Tools </small></b></span>"
     },
     [
-      "concepts/tools/wallet&explorer",
-      "concepts/tools/near-cli",
-      "concepts/tools/near-indexer-framework",
-      "concepts/tools/kurtosis-localnet"
+      "concepts/tools/web-gui",
+      "concepts/tools/sheppard"
     ],
     {
       "type": "html",
       "value": "<hr/>"
-    },
-    {
-      "type": "html",
-      "value": "<span class='menu__link'><b><small> Advanced Topics </small></b></span>"
-    },
-    [
-      "concepts/advanced/vm",
-      "concepts/basics/runtime",
-      "concepts/advanced/specification",
-      "concepts/advanced/papers"
-    ],
-    {
-      "type": "html",
-      "value": "<hr/>"
-    },
-    {
-      "type": "html",
-      "value": "<span class='menu__link'><b><small> From Web 2 to Web 3 </small></b></span>"
-    },
-    [
-      "concepts/web3/intro",
-      "concepts/web3/basics",
-      "concepts/web3/near",
-      "concepts/web3/economics",
-      "concepts/web3/nfts"
-    ]
+    }
   ],
   "develop": [
-    "develop/welcome",
     {
       "type": "html",
       "value": "<hr/>"
@@ -83,77 +54,31 @@
       "type": "html",
       "value": "<span class='menu__link'><b><small> Get Familiarized </small></b></span>"
     },
-    "develop/whatiscontract",
+    "develop/whatisjob",
     {
       "⏱️ Quickstart": [
-        "develop/quickstart/hello-near",
-        "develop/quickstart/count-near"
+        "develop/quickstart/hello-docker",
+        "develop/quickstart/hello-blender"
       ]
     },
-    {
-      "type": "link",
-      "label": "⭐ Contract Examples",
-      "href": "https://near.dev"
-    },
+    "develop/node_api",
+    "develop/wallet_api",
     {
       "type": "html",
       "value": "<hr/>"
     },
     {
       "type": "html",
-      "value": "<span class='menu__link'><b><small> Build a Contract </small></b></span>"
+      "value": "<span class='menu__link'><b><small> Build a Job </small></b></span>"
     },
-    "develop/prerequisites",
+    "develop/docker",
     {
-      "Develop": [
-        "develop/contracts/anatomy",
-        "develop/contracts/environment/environment",
-        "develop/contracts/storage",
-        "develop/contracts/actions",
-        "develop/contracts/crosscontract",
-        {
-          "🛡️ Security": [
-            "develop/contracts/security/storage",
-            "develop/contracts/security/callbacks",
-            "develop/contracts/security/sybil"
-          ]
-        },
-        "develop/contracts/security/checklist"
+      "Examples": [
+        "develop/examples/blender",
+        "develop/examples/jupyter"
       ]
     },
-    {
-      "Test": [
-        "develop/testing/introduction",
-        "develop/testing/unit-test",
-        "develop/testing/integration-test"
-      ]
-    },
-    "develop/deploy",
-    "develop/frontend",
-    {
-      "type": "html",
-      "value": "<hr/>"
-    },
-    {
-      "type": "html",
-      "value": "<span class='menu__link'><b><small> NEAR Contract's VMs </small></b></span>"
-    },
-    {
-      "type": "link",
-      "label": "🛆 Ethereum VM",
-      "href": "https://aurora.dev"
-    },
-    "develop/advanced/enclave",
-    {
-      "type": "html",
-      "value": "<hr/>"
-    },
-    {
-      "type": "html",
-      "value": "<span class='menu__link'><b><small> Topics & Tutorials </small></b></span>"
-    },
-    "develop/advanced/ft",
-    "develop/advanced/nft",
+    "develop/custom_job",
     {
       "type": "html",
       "value": "<hr/>"
@@ -164,61 +89,34 @@
     },
     {
       "type": "link",
-      "label": "🎓 NEAR University",
-      "href": "https://near.university"
+      "label": "🎓 GPUX Acedamy",
+      "href": "https://gpux.ai/"
     }
   ],
   "dapps": [
-    "integrate/welcome",
+    "farm/welcome",
     {
       "type": "html",
       "value": "<hr/>"
     },
     {
       "type": "html",
-      "value": "<span class='menu__link'><b><small> Using Contracts </small></b></span>"
+      "value": "<span class='menu__link'><b><small> Provision </small></b></span>"
     },
-    {
-      "type": "category",
-      "label": "🌐 Web Apps",
-      "link": {
-        "type": "doc",
-        "id": "integrate/web/introduction"
-      },
-      "items": [
-        "integrate/web/wallet-login",
-        "integrate/web/view-methods",
-        "integrate/web/change-methods",
-        "integrate/web/sign-messages",
-        "integrate/web/deploy"
-      ]
-    },
-    "integrate/cli",
-    "integrate/indexer",
-    "integrate/realtime",
+    "farm/hardware",
+    "farm/software",
+    "farm/monitoring",
+    "farm/farming",
     {
       "type": "html",
       "value": "<hr/>"
     },
     {
       "type": "html",
-      "value": "<span class='menu__link'><b><small> APIs </small></b></span>"
+      "value": "<span class='menu__link'><b><small> Builds </small></b></span>"
     },
-    {
-      "☎️ RPC": [
-        "integrate/rpc/introduction"
-      ]
-    },
-    {
-      "🌠 Events": [
-        "integrate/events/introduction"
-      ]
-    },
-    {
-      "type": "link",
-      "label": "🚀 NEAR-API-JS",
-      "href": "https://near.github.io/near-api-js/"
-    },
+    "farm/build/ramesses_iii",
+    "farm/build/king_tut",
     {
       "type": "html",
       "value": "<hr/>"
@@ -230,12 +128,7 @@
     {
       "type": "link",
       "label": "👛 Wallet",
-      "href": "https://wallet.near.org"
-    },
-    {
-      "type": "link",
-      "label": "🔗 Explorer",
-      "href": "https://explorer.near.org"
+      "href": "https://wallet.gpux.ai"
     },
     {
       "type": "html",
@@ -247,8 +140,8 @@
     },
     {
       "type": "link",
-      "label": "🎓 NEAR University",
-      "href": "https://near.university"
+      "label": "🎓 GPUX Acedamy",
+      "href": "https://gpux.ai"
     }
   ],
   "integrate": {

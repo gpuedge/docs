@@ -1,7 +1,7 @@
 module.exports = {
   title: "NEAR Documentation",
   tagline: "Documentation for NEAR Protocol",
-  url: "https://docs.near.org",
+  url: "https://.pages.dev",
   baseUrl: "/",
   organizationName: "near",
   projectName: "docs",
@@ -62,7 +62,7 @@ module.exports = {
     announcementBar: {
       id: "Docs",
       content:
-        '⚠️ This page is in the making ⚠️ The NEAR documentation can be <a href="https://docs.near.org">found here</a>',
+        '⚠️ This page is in the making ⚠️ The GPUX Protocol is in Beta</a>',
       backgroundColor: "#ff6d6d",
       textColor: "#0e0e0e",
       isCloseable: false,
@@ -75,7 +75,7 @@ module.exports = {
         "ruby",
         "go",
         "toml",
-        "typescript",
+        "typescript"
       ],
     },
     colorMode: {
@@ -83,9 +83,8 @@ module.exports = {
       disableSwitch: true,
     },
     navbar: {
-      title: "DOCS",
       logo: {
-        src: "img/near_logo.svg",
+        src: "img/logo2.png",
       },
       items: [
         {
@@ -94,32 +93,22 @@ module.exports = {
           position: "left",
         },
         {
-          to: "/develop/welcome",
-          label: "💻 Develop",
+          to: "/develop/whatisjob",
+          label: "💻 Run Job",
           position: "left",
         },
         {
-          to: "/integrate/welcome",
-          label: "⚙️ Integrate",
+          to: "/farm/welcome",
+          label: "🚜 Run Farm",
           position: "left",
         },
-        {
-          to: "/integrate/welcome",
+        /*{
+          to: "/farm/welcome",
           label: "📚 Tutorials",
           position: "left",
-        },
+        },*/
         {
-          href: "https://wiki.near.org",
-          label: "Wiki",
-          position: "right",
-        },
-        {
-          href: "https://near-sdk.io",
-          label: "SDK",
-          position: "right",
-        },
-        {
-          href: "https://near-nodes.io",
+          href: "https://wallet.gpux.ai/api/node/list",
           label: "Nodes",
           position: "right",
         },
@@ -159,7 +148,7 @@ module.exports = {
   },
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "vi", "zh-CN"],
+    locales: ["en"],
     localeConfigs: {
       "zh-CN": {
         label: "简体中文",

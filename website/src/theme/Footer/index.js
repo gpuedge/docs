@@ -59,6 +59,24 @@ function Footer() {
   }
 
   return (
+  <footer className="relative pt-100 pb-40 md:pb-100 bg-black text-white mt-150">
+    <div className="container">
+      <p className="text-14 mt-50 md:mt-100">
+        2022 GPUX.AI<span className="mx-10">|</span>All rights
+        reserved<span className="mx-10">|</span>
+        <a href="mailto:vans554@gmail.com" className="hover:text-yellow">
+          hello@gpux.ai
+        </a>
+        <span className="mx-10">|</span>
+        <a href="https://gpux.ai/privacy/" className="hover:text-yellow">
+          Privacy Policy
+        </a>
+      </p>
+    </div>
+  </footer>
+  )
+
+  return (
       <footer className="relative pt-100 pb-40 md:pb-100 bg-black text-white mt-150">
         <div className="absolute pin-t pin-r" style={{ maxWidth: "50vw" }}>
           <img
