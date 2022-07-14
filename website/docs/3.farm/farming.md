@@ -19,7 +19,7 @@ Currently this is the quickest way to pass key so we use it. TPMs dont support E
 
 :::success
 If you are behind a Router the easiest way to make your
-farm accessible from the outside is to setup Cloudflare Argo Tunnel
+farm accessible from the outside is to setup Cloudflare (Zero Trust) Tunnel
 https://www.cloudflare.com/products/tunnel/ (its totally free)
 :::
 
