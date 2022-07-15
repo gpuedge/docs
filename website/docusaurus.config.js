@@ -1,6 +1,6 @@
 module.exports = {
-  title: "NEAR Documentation",
-  tagline: "Documentation for NEAR Protocol",
+  title: "GPUX Documentation",
+  tagline: "Documentation for GPUX Protocol",
   url: "https://.pages.dev",
   baseUrl: "/",
   organizationName: "near",
