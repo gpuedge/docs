@@ -6,31 +6,43 @@ title: Dockerfile
 ## Storage
 #### GPUX Storage
 
-GPUX has native storage exposed inside the running container on a unix socket. The socket is passed through as a volume and located at `/api`. You can use it to upload or download a file from inside the container to be accessible outside. Any file uploaded will return the `sha1` it hashes to.
+GPUX has native storage exposed inside the running container on a unix socket. The socket is passed through as a volume and located at `/gpux_api`. You can use it to upload or download a file from inside the container to be accessible outside. Any file uploaded will return the `sha1` it hashes to.
 
 ```bash
 # Download 
-curl --unix-socket /api "http://dontcare/gpux/v0/cat/$SHA1" --output source.blend
+curl --unix-socket /gpux_api "http://dontcare/api/file/download/$SHA1" --output source.blend
 ```
 ```bash
 # Upload 
-SHA1=$(curl -s --unix-socket /api --data-binary @out.zip "http://dontcare/gpux/v0/add" | jq -r '.sha1')
+SHA1=$(curl -s --unix-socket /gpux_api --data-binary @out.zip "http://dontcare/api/file/upload/" | jq -r '.sha1')
 ```
 
 #### Persistent Storage
 
 GPUX containers also have persistent storage mounted based on the signing public key of
 the job. Currently persistent storage is node local and does not carry over between nodes. 
-The persistent storage is mounted onto `/persist`, anything put in this folder will be
-shared with all the containers running off the same public key on the same node, in real time.
+The persistent storage is mounted onto `/gpux_usr/`, anything put in this folder will be
+shared with all the containers running off the same public key on the same node, in real time.  
+  
+Job local storage is mounted on `/gpux_job/`, this storage gets purged when the job is deleted.  
 
 :::caution
 Persistent Storage and GPUX Storage is node local only. For now..
 :::
 
+## Port Forwarding
+
+GPUX forwards ports using subdomain forwarding (similar to IPFS). To access port `8080` on job `061i6uku7ie62tg1` which
+is on node `node0.gpux.ai` you would simply visit `http://061i6uku7ie62tg1-8080.node0.gpux.ai`. Note the `http` part
+currently https is not fully supported (due to complexities of doublewild card certificates) but it will be in future.
+
+:::caution
+HTTPS for port forwarding is not fully supported. For now..
+:::
+
 ## Cloudflare Tunnel
 
-Sometimes we want to access what is running inside the container, but GPUX does not forward or expose any ports (coming soon™️). To achieve this quickly we can run an anonymous cloudflare reverse tunnel.
+If we want to use HTTPS or the node is behind a firewall we can run an anonymous CloudFlare reverse tunnel.
 
 #### Running
 
